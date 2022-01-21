@@ -37,7 +37,7 @@ jobs:
       displayName: 'Copy Specific Config'
       inputs:
         targetType: inline
-        script: Copy-Item -Path "$(System.ArtifactStagingDirectory)/s-1.0.0.jar" -Destination "$(build.ArtifactStagingDirectory)/app.jar"
+        script: Copy-Item -Path "$(Build.ArtifactStagingDirectory)/s-1.0.0.jar" -Destination "$(Build.ArtifactStagingDirectory)/app.jar"
     - task: PublishBuildArtifacts@1
       inputs:
         PathtoPublish: '$(Build.ArtifactStagingDirectory)'
@@ -54,7 +54,7 @@ jobs:
         downloadType: 'single'
         artifactName: 'drop'
         downloadPath: '$(System.ArtifactsDirectory)'
-        checkDownloadedFiles: true    
+        checkDownloadedFiles: true
     - task: Docker@2
       inputs:
         containerRegistry: 'DockerHub'
