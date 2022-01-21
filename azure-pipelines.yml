@@ -24,17 +24,16 @@ jobs:
         Contents: '*.jar'
         TargetFolder: '$(Build.ArtifactStagingDirectory)/app'
     - task: CopyFiles@2
-      displayName: "Copy docker and helm files"
+      displayName: "Copy docker"
       inputs:
         SourceFolder: '$(system.defaultworkingdirectory)'
         Contents: |
           Dockerfile
           .dockerignore
-          entrypoint.sh
         TargetFolder: '$(Build.ArtifactStagingDirectory)/'
         OverWrite: true
     - task: CopyFiles@2
-      displayName: "Copy docker and helm files"
+      displayName: "Copy entrypoint.sh"
       inputs:
         SourceFolder: '$(system.defaultworkingdirectory)'
         Contents: |
