@@ -50,6 +50,11 @@ jobs:
         artifactName: 'drop'
         downloadPath: '$(System.ArtifactsDirectory)'
         checkDownloadedFiles: true
+    - task: PowerShell@2
+      displayName: 'Copy Specific Config'
+      inputs:
+        targetType: inline
+        script: Copy-Item -Path "$(System.ArtifactsDirectory)/s-1.0.0.jar" -Destination "$(build.ArtifactsDirectory)/app.jar"
     - task: Docker@2
       inputs:
         containerRegistry: 'DockerHub'
