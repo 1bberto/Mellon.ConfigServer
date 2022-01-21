@@ -61,7 +61,7 @@ jobs:
         repository: 'mellon.configserver'
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
-        buildContext: '$(System.DefaultWorkingDirectory)/*'
+        buildContext: '$(System.DefaultWorkingDirectory)'
         tags: |
           $(Build.BuildId)
           latest
