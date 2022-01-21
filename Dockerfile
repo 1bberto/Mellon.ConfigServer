@@ -6,7 +6,7 @@ RUN apk update && apk upgrade && \
 RUN mkdir /app
 WORKDIR /app
 
-COPY . /app
+COPY app /app/
 RUN chmod +x /app/entrypoint.sh
 
 RUN adduser -D whale --uid 1000
