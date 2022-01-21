@@ -61,6 +61,7 @@ jobs:
         repository: 'mellon.configserver'
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
+        buildContext: '$(System.ArtifactsDirectory)'
         tags: |
           $(Build.BuildId)
           latest
