@@ -42,7 +42,6 @@ jobs:
       inputs:
         SourceFolder: 'Remove Jar'
         Contents: "$(Build.ArtifactStagingDirectory)/s-1.0.0.jar"
-    
     - task: PublishBuildArtifacts@1
       inputs:
         PathtoPublish: '$(Build.ArtifactStagingDirectory)'
