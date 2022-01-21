@@ -1,0 +1,17 @@
+server:
+  port: 8888
+
+spring:
+  cloud:
+    config:
+      server:
+        azure:
+          keyvault:
+            uri: ${KEYVAULT_URI}
+            client-id: ${KEYVAULT_CLIENT_ID}
+            client-key: ${KEYVAULT_CLIENT_SECRET}
+            tenant-id: ${AZ_TENANT_ID}
+        git:
+          refreshRate: 30
+          clone-on-start: true
+          uri: ${GIT_URI}
