@@ -43,6 +43,7 @@ jobs:
         SourceFolder: '$(Build.ArtifactStagingDirectory)'
         contents: |
           /s-1.0.0.jar
+          /*-plain.jar
     - task: PublishBuildArtifacts@1
       inputs:
         PathtoPublish: '$(Build.ArtifactStagingDirectory)'
