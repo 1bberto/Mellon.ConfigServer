@@ -5,7 +5,7 @@ pr:
   - main
 
 jobs:
-  - job: "Build"
+  - job: "BuildAndPush"
     pool:
       vmImage: 'ubuntu-latest'
     steps:
@@ -63,33 +63,6 @@ jobs:
         command: 'buildAndPush'
         Dockerfile: '$(Build.ArtifactStagingDirectory)/Dockerfile'
         buildContext: '$(Build.ArtifactStagingDirectory)'
-        tags: |
-          $(Build.BuildId)
-          latest
-
-  - job: "DockerHub"
-    dependsOn: "Build"
-    pool:
-      vmImage: 'ubuntu-latest'
-    steps:
-    - task: DownloadBuildArtifacts@1
-      inputs:
-        buildType: 'current'
-        downloadType: 'single'
-        artifactName: 'drop'
-        downloadPath: '$(System.ArtifactsDirectory)'
-        checkDownloadedFiles: true
-    - task: Docker@2
-      inputs:
-        containerRegistry: 'DockerHub'
-        command: 'login'
-        repository: '1berto/mellon.configserver'
-    - task: Docker@2
-      inputs:
-        containerRegistry: 'DockerHub'
-        repository: '1berto/mellon.configserver'
-        command: 'buildAndPush'
-        Dockerfile: '**/Dockerfile'
         tags: |
           $(Build.BuildId)
           latest
