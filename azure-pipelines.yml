@@ -70,7 +70,7 @@ jobs:
     - task: Docker@2
       inputs:
         containerRegistry: 'DockerHub'
-        repository: '1bberto/mellon.configserver'
+        repository: '1berto/mellon.configserver'
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
         tags: |
