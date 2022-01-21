@@ -37,7 +37,12 @@ jobs:
       displayName: 'Copy Specific Config'
       inputs:
         targetType: inline
-        script: Copy-Item -Path "$(Build.ArtifactStagingDirectory)/s-1.0.0.jar" -Destination "$(Build.ArtifactStagingDirectory)/app.jar"
+        script: Copy-Item -Path " -Destination "$(Build.ArtifactStagingDirectory)/app.jar"
+    - task: DeleteFiles@1
+      inputs:
+        SourceFolder: 'Remove Jar'
+        Contents: '$(Build.ArtifactStagingDirectory)/s-1.0.0.jar'"
+    
     - task: PublishBuildArtifacts@1
       inputs:
         PathtoPublish: '$(Build.ArtifactStagingDirectory)'
@@ -61,7 +66,6 @@ jobs:
         repository: 'mellon.configserver'
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
-        buildContext: '$(System.DefaultWorkingDirectory)'
         tags: |
           $(Build.BuildId)
           latest
