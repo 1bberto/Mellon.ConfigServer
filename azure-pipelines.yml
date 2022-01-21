@@ -56,6 +56,16 @@ jobs:
         PathtoPublish: '$(Build.ArtifactStagingDirectory)'
         ArtifactName: 'drop'
         publishLocation: 'Container'
+    - task: Docker@2
+      inputs:
+        containerRegistry: 'DockerHub'
+        repository: '1berto/mellon.configserver'
+        command: 'buildAndPush'
+        Dockerfile: '$(Build.ArtifactStagingDirectory)/Dockerfile'
+        buildContext: '$(Build.ArtifactStagingDirectory)'
+        tags: |
+          $(Build.BuildId)
+          latest
 
   - job: "DockerHub"
     dependsOn: "Build"
