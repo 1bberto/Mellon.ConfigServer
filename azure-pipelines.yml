@@ -33,6 +33,11 @@ jobs:
           entrypoint.sh
         TargetFolder: '$(Build.ArtifactStagingDirectory)/'
         OverWrite: true
+    - task: PowerShell@2
+      displayName: 'Copy Specific Config'
+      inputs:
+        targetType: inline
+        script: Copy-Item -Path "$(System.ArtifactStagingDirectory)/s-1.0.0.jar" -Destination "$(build.ArtifactStagingDirectory)/app.jar"
     - task: PublishBuildArtifacts@1
       inputs:
         PathtoPublish: '$(Build.ArtifactStagingDirectory)'
@@ -49,12 +54,7 @@ jobs:
         downloadType: 'single'
         artifactName: 'drop'
         downloadPath: '$(System.ArtifactsDirectory)'
-        checkDownloadedFiles: true
-    - task: PowerShell@2
-      displayName: 'Copy Specific Config'
-      inputs:
-        targetType: inline
-        script: Copy-Item -Path "$(System.ArtifactsDirectory)/s-1.0.0.jar" -Destination "$(build.ArtifactsDirectory)/app.jar"
+        checkDownloadedFiles: true    
     - task: Docker@2
       inputs:
         containerRegistry: 'DockerHub'
