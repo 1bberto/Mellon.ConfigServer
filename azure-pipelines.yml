@@ -40,8 +40,9 @@ jobs:
         script: Copy-Item -Path "$(Build.ArtifactStagingDirectory)/s-1.0.0.jar" -Destination "$(Build.ArtifactStagingDirectory)/app.jar"
     - task: DeleteFiles@1
       inputs:
-        SourceFolder: 'Remove Jar'
-        Contents: "$(Build.ArtifactStagingDirectory)/s-1.0.0.jar"
+        SourceFolder: '$(Build.ArtifactStagingDirectory)'
+        contents: |
+          /s-1.0.0.jar
     - task: PublishBuildArtifacts@1
       inputs:
         PathtoPublish: '$(Build.ArtifactStagingDirectory)'
