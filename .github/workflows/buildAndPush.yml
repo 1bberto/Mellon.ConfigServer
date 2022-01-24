@@ -19,14 +19,12 @@ jobs:
       with:
         java-version: '11'
         distribution: 'temurin'
+ 
+    - name: Setup Gradle
+      uses: gradle/gradle-build-action@v2
     
-    - name: Validate Gradle wrapper
-      uses: gradle/wrapper-validation-action@e6e38bacfdf1a337459f332974bb2327a31aaf4b
-    
-    - name: Gradle CMD      
-      uses: puredevops/sample-action@v1.3
-      with:
-        arguments: build
+    - name: Execute Gradle build
+      run: ./gradlew build
 
     - name: Set up QEMU
       uses: docker/setup-qemu-action@v1
