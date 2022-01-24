@@ -7,7 +7,6 @@ spring:
       server:
         azure:
           keyvault:
-            enabled: ${KEYVAULT_ENABLED}
             uri: ${KEYVAULT_URI}
             client-id: ${KEYVAULT_CLIENT_ID}
             client-key: ${KEYVAULT_CLIENT_SECRET}
