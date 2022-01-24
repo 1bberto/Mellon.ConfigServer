@@ -11,5 +11,6 @@ services:
       GIT_URI: https://github.com/1bberto/Mellon.ConfigServer.Development
       GIT_USERNAME: 
       GIT_PASSWORD:
+      SPRING_PROFILES_ACTIVE: Development
     ports:
       - "8888:8888"
