@@ -4,7 +4,6 @@ server:
 spring:
   cloud:
     config:
-      label: ${CONFIG_LABEL}
       server:
         azure:
           keyvault:
