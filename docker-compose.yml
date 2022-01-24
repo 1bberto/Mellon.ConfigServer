@@ -1,0 +1,15 @@
+version: "3.4"
+services:
+  config-server:
+    container_name: config-server
+    image: 1berto/mellon.configserver    
+    environment:
+      KEYVAULT_URI:
+      KEYVAULT_CLIENT_ID:
+      KEYVAULT_CLIENT_SECRET:
+      AZ_TENANT_ID:
+      GIT_URI: https://github.com/1bberto/Mellon.ConfigServer
+      GIT_USERNAME: 
+      GIT_PASSWORD: 
+    ports:
+      - "8888:8888"
