@@ -16,3 +16,4 @@ spring:
           refreshRate: 30
           clone-on-start: true
           uri: ${GIT_URI}
+          default-label: ${GIT_DEFAULT_BRANCH}
