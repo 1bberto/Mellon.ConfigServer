@@ -4,7 +4,7 @@ services:
     container_name: config-server
     image: 1berto/mellon.configserver    
     environment:
-      KEYVAULT_URI:
+      KEYVAULT_URI: 
       KEYVAULT_CLIENT_ID:
       KEYVAULT_CLIENT_SECRET:
       AZ_TENANT_ID:
@@ -12,5 +12,6 @@ services:
       GIT_USERNAME: 
       GIT_PASSWORD:
       SPRING_PROFILES_ACTIVE: Development
+      CONFIG_LABEL: main
     ports:
       - "8888:8888"

@@ -5,7 +5,6 @@ spring:
   cloud:
     config:
       label: ${CONFIG_LABEL}
-      profile: ${CONFIG_PROFILE}
       server:
         azure:
           keyvault:
