@@ -29,6 +29,22 @@ jobs:
     - name: Execute Gradle build
       run: ./gradlew build
 
+    - name: Copy Jar      
+      uses: canastro/copy-action@0.0.2
+      with:
+        # Source file
+        source: ./build/libs/Mellon.ConfigServer-1.0.0.jar
+        # Target file
+        target: ./app/app.jar
+    
+    - name: Copy Entrypoint      
+      uses: canastro/copy-action@0.0.2
+      with:
+        # Source file
+        source: ./entrypoint.sh
+        # Target file
+        target: ./app/entrypoint.sh
+
     - name: Set up QEMU
       uses: docker/setup-qemu-action@v1
     
