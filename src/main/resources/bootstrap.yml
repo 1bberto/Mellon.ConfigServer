@@ -1,5 +1,3 @@
 spring:
-  config:
-    import: "optional:configserver:"
   application:
-    name: demo
+    name: config-server
