@@ -8,8 +8,8 @@ services:
       KEYVAULT_CLIENT_ID:
       KEYVAULT_CLIENT_SECRET:
       AZ_TENANT_ID:
-      GIT_URI: https://github.com/1bberto/Mellon.ConfigServer
+      GIT_URI: https://github.com/1bberto/Mellon.ConfigServer.Development
       GIT_USERNAME: 
-      GIT_PASSWORD: 
+      GIT_PASSWORD:
     ports:
       - "8888:8888"
