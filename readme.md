@@ -130,7 +130,7 @@ on the file application.
 
 As you might have realised the configurations and settings are inside another repository [Config-Repository](https://github.com/1bberto/Mellon.ConfigServer.Configs)
 
-Within this config you will find the fallowing structure
+Within this config you will find the following structure
 
 ![image](https://user-images.githubusercontent.com/3129978/150923013-a1133d9a-ee45-4a21-9aab-0bba5fb4e0c1.png)
 
