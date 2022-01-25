@@ -38,9 +38,6 @@ This section should list any major frameworks/libraries used to bootstrap your p
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
 ### Prerequisites
 
 This is an example of how to list things you need to use the software and how to install them, I used *WSL* - Debian to build and test locally the config-server, but if you want to jump this step no worries.
@@ -125,22 +122,23 @@ on the file application.
 }  
 ```
 
-*Spring.Application.Name* = application's name needs to be the same as stored on the repository where the config is stored, ill get there in a minute don't worry
-*Spring.Cloud.Config.Uri* = this is the spring cloud url
-*Spring.Cloud.Config.FailFast* = if set to true the application will not start up if the config server is not found
+* *Spring.Application.Name* = application's name needs to be the same as stored on the repository where the config is stored, ill get there in a minute don't worry
+* *Spring.Cloud.Config.Uri* = this is the spring cloud url
+* *Spring.Cloud.Config.FailFast* = if set to true the application will not start up if the config server is not found
 
 ### Storing the configuration and Settings
 
-As you might have realised the configurations and settings are inside another repository (Config-Repository)[https://github.com/1bberto/Mellon.ConfigServer.Configs]
+As you might have realised the configurations and settings are inside another repository [Config-Repository](https://github.com/1bberto/Mellon.ConfigServer.Configs)
 
-Within this condig you will find the fallowing structure
+Within this config you will find the fallowing structure
 
 ![image](https://user-images.githubusercontent.com/3129978/150923013-a1133d9a-ee45-4a21-9aab-0bba5fb4e0c1.png)
 
 the spring cloud config works using layers, and this is the hierarchy:
 * first it will loads the configuration on the file *application.yml*
 * then [Spring.Application.Name].yml if exists
-* then [Spring.Application.Name]-[profile].yml, which in your case for the Sample.csproj is set to Development, you can change it on the file /tests/Properties/launchSettings.json changing the `ASPNETCORE_ENVIRONMENT`
+* then [Spring.Application.Name]-[profile].yml 
+ * profile in this case is set as "Development", you can change it on the file /tests/Properties/launchSettings.json changing the `ASPNETCORE_ENVIRONMENT`
 
 if we change the `ASPNETCORE_ENVIRONMENT` to *Production* and run the api the new response on the *https://localhost:7180* endpoint will be 
 
