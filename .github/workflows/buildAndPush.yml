@@ -58,7 +58,7 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         context: .
-        push: false
+        push: true
         tags: |
           1berto/mellon.configserver:latest
           1berto/mellon.configserver:${{github.run_number}}
