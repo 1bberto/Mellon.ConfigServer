@@ -16,12 +16,12 @@ Why Mellon, mellon is the Sindarin (and Noldorin) word for "friend", yes I'm a b
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-The main idea of this project is to create a instance of "Spring Cloud Config" using "Azure Key Vault" and showing how to use it on net6 applications.
+The main idea of this project is to create a instance of "Spring Cloud Config" using "Azure Key Vault" and showing how to use it on .NET 6.0 applications.
 
 Here's why:
 * Spring Cloud Config is a well know tool for externalized configuration in distributed systems.
 * Azure Key Vault is excellent to store secrets and there a lot of companies that uses azure as their cloud provider
-* net6 is the most advanced and fast framework to develop applications using C#
+* .NET 6.0 is the most advanced and fast framework to develop applications using C#
 * It's fun! 🚀🎉
 
 ### Built With
