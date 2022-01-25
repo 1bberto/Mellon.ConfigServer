@@ -145,8 +145,8 @@ the spring cloud config works using layers, and this is the hierarchy:
 * then [Spring.Application.Name]-[profile].yml, which in your case for the Sample.csproj is set to Development, you can change it on the file /tests/Properties/launchSettings.json changing the `ASPNETCORE_ENVIRONMENT`
 
 if we change the `ASPNETCORE_ENVIRONMENT` to *Production* and run the api the new response on the *https://localhost:7180* endpoint will be 
-![image](https://user-images.githubusercontent.com/3129978/150924486-01916077-7a64-4b31-b6b6-e58fd8d108f6.png)
 
+![image](https://user-images.githubusercontent.com/3129978/150924486-01916077-7a64-4b31-b6b6-e58fd8d108f6.png)
 
 ### Using Azure Key Vault 
 
@@ -208,8 +208,6 @@ Use this space to list resources you find helpful and would like to give credit 
 * [Gradle](https://gradle.org/)
 * [Spring Cloud Azure KeyVault](https://github.com/srempfer/spring-cloud-config-azure-keyvault)
 * [Azure Key Vault](https://azure.microsoft.com/en-us/services/key-vault/)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
