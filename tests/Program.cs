@@ -28,7 +28,13 @@ app.UseAuthorization();
 
 app.Map("/", (IConfiguration configuration) =>
 {
-    return configuration["connectionString"];
+    return new
+    {
+        username = configuration["username"],
+        password = configuration["password"],
+        connectionString = configuration["connectionString"],
+        super_secret_key = configuration["super-secret-key"],
+    };
 });
 
 app.Run();
