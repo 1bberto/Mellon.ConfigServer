@@ -103,7 +103,7 @@ There is an WebApi called Sample inside the folder /tests
 
 #### Running the WebApi
 ```sh
-    dotnet run Sample.csproj
+dotnet run Sample.csproj
 ```
 
 The application will be exposed on the endpoint https://localhost:7180
@@ -139,10 +139,10 @@ Within this condig you will find the fallowing structure
 
 ![image](https://user-images.githubusercontent.com/3129978/150923013-a1133d9a-ee45-4a21-9aab-0bba5fb4e0c1.png)
 
-the spring cloud config works using layers, and this is the hierarchy
-first it will loads the configuration on the file *application.yml*
-then [Spring.Application.Name].yml if exists
-then [Spring.Application.Name]-[profile].yml, which in your case for the Sample.csproj is set to Development, you can change it on the file /tests/Properties/launchSettings.json changing the `ASPNETCORE_ENVIRONMENT`
+the spring cloud config works using layers, and this is the hierarchy:
+* first it will loads the configuration on the file *application.yml*
+* then [Spring.Application.Name].yml if exists
+* then [Spring.Application.Name]-[profile].yml, which in your case for the Sample.csproj is set to Development, you can change it on the file /tests/Properties/launchSettings.json changing the `ASPNETCORE_ENVIRONMENT`
 
 if we change the `ASPNETCORE_ENVIRONMENT` to *Production* and run the api the new response on the *https://localhost:7180* endpoint will be 
 ![image](https://user-images.githubusercontent.com/3129978/150924486-01916077-7a64-4b31-b6b6-e58fd8d108f6.png)
@@ -169,8 +169,7 @@ restart your api aswell once the settings are only loaded when the application i
 
 and then BOOM 💣
 
-![image](https://user-images.githubusercontent.com/3129978/150926658-5f11b613-dfe6-4ec5-b6cc-2c4d0195dd3c.png)
-
+![image](https://user-images.githubusercontent.com/3129978/150927445-8393d5c8-0b38-4e15-b64e-c27286596f3d.png)
 
 <!-- ROADMAP -->
 ## Roadmap
