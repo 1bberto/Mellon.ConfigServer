@@ -1,7 +1,5 @@
 <div id="top"></div>
 
-[![CI](https://github.com/1bberto/Mellon.ConfigServer/actions/workflows/buildAndPush.yml/badge.svg?branch=main)](https://github.com/1bberto/Mellon.ConfigServer/actions/workflows/buildAndPush.yml)
-
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
