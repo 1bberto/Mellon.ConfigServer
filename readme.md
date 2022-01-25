@@ -57,7 +57,7 @@ sudo apt-get install openjdk-8-jre
 #### Running it using linux (after you fallowed the steps on Prerequisites: 
 ```sh
 gradle clean build
-export GIT_URI = https://github.com/1bberto/Mellon.ConfigServer.development
+export GIT_URI = https://github.com/1bberto/Mellon.ConfigServer.Configs
 export GIT_DEFAULT_BRANCH = main
 export SPRING_PROFILES_ACTIVE = Development
 cd build/libs
