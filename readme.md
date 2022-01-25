@@ -198,8 +198,6 @@ Project Link: [https://github.com/1bberto/Mellon.ConfigServer](https://github.co
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
-
 * [Spring Cloud Config](https://cloud.spring.io/spring-cloud-config/reference/html/)
 * [Gradle](https://gradle.org/)
 * [Spring Cloud Azure KeyVault](https://github.com/srempfer/spring-cloud-config-azure-keyvault)
