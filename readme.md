@@ -191,7 +191,7 @@ Don't forget to give the project a star! Thanks again!
 <!-- CONTACT -->
 ## Contact
 
-Humberto Rodrigues - [@1bbertp](https://instagram.com/1bberto) - humberto_henrique1@live.com
+Humberto Rodrigues - [@1bberto](https://instagram.com/1bberto) - humberto_henrique1@live.com
 
 Project Link: [https://github.com/1bberto/Mellon.ConfigServer](https://github.com/1bberto/Mellon.ConfigServer)
 
